@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar ERD: Entitas, Atribut, dan Relasi</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.7;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #006400;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+      }
+      nav {
+        text-align: center;
+        background-color: #e0f0e0;
+        padding: 10px;
+      }
+      nav a {
+        color: #006400;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: bold;
+      }
+      article {
+        background-color: white;
+        margin: 20px auto;
+        padding: 25px;
+        width: 85%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #004d00;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        margin-top: 30px;
+      }
+      .btn-link {
+        background-color: #006400;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+      .btn-youtube {
+        display: inline-block;
+        background-color: #ff0000;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+      .btn-youtube:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Belajar ERD dengan Santai</h1>
+      <p>Memahami konsep dasar Atribut, Entitas, dan Relasi dalam Basis Data</p>
+    </header>
+
+    <nav>
+      <a href="#post1">Atribut</a>
+      <a href="#post2">Entitas</a>
+      <a href="#post3">Relasi</a>
+      <a href="#post4">Video</a>
+    </nav>
+
+    <article id="post1">
+      <h2>Post 1: Apa Itu Atribut?</h2>
+      <p>
+        Kalau diibaratkan, <b>atribut</b> itu seperti “sifat” atau “detail” dari
+        suatu hal. Misalnya kamu punya entitas <i>Mahasiswa</i>, maka atributnya
+        bisa berupa <b>NIM</b>, <b>Nama</b>, <b>Alamat</b>, dan
+        <b>Tanggal Lahir</b>. Jadi, atribut ini yang menjelaskan lebih detail
+        tentang entitasnya.
+      </p>
+      <p>
+        Dalam dunia basis data, atribut adalah kolom yang menyimpan nilai
+        tertentu dari setiap record. Misalnya, kalau ada tabel Mahasiswa, maka
+        kolom “Nama” dan “NIM” adalah atribut. Setiap mahasiswa punya nilai
+        berbeda di atribut tersebut.
+      </p>
+      <ul>
+        <li>
+          <b>Atribut kunci (key attribute):</b> atribut unik seperti NIM yang
+          jadi pembeda antar data.
+        </li>
+        <li>
+          <b>Atribut sederhana:</b> atribut yang hanya punya satu nilai,
+          misalnya Nama.
+        </li>
+        <li>
+          <b>Atribut majemuk:</b> atribut yang bisa dipecah lagi, contohnya
+          “Alamat” yang bisa dibagi jadi Jalan, Kota, dan Kode Pos.
+        </li>
+      </ul>
+    </article>
+
+    <article id="post2">
+      <h2>Post 2: Apa Itu Entitas?</h2>
+      <p>
+        <b>Entitas</b> bisa dibilang sebagai “objek utama” yang datanya ingin
+        kita simpan di dalam database. Entitas ini bisa berupa orang, benda,
+        tempat, atau kejadian yang punya data penting untuk dicatat. Contohnya
+        di sistem akademik, kita bisa punya entitas seperti <b>Mahasiswa</b>,
+        <b>Dosen</b>, dan <b>Mata Kuliah</b>.
+      </p>
+      <p>
+        Tiap entitas biasanya punya sekumpulan atribut yang menjelaskan
+        karakteristiknya. Misalnya entitas Mahasiswa punya atribut seperti NIM,
+        Nama, dan Alamat, sedangkan entitas Mata Kuliah punya atribut Kode MK
+        dan Nama MK.
+      </p>
+      <p>
+        Dalam ERD (Entity Relationship Diagram), entitas biasanya digambarkan
+        dengan bentuk <b>persegi panjang</b>. Satu entitas bisa terhubung dengan
+        entitas lain melalui relasi tertentu, misalnya “Mahasiswa mengambil Mata
+        Kuliah”.
+      </p>
+    </article>
+
+    <article id="post3">
+      <h2>Post 3: Apa Itu Relasi dalam ERD?</h2>
+      <p>
+        Setelah kita tahu apa itu entitas dan atribut, sekarang waktunya bahas
+        <b>relasi</b>. Relasi adalah hubungan antar entitas dalam sistem.
+        Misalnya, entitas <b>Mahasiswa</b> berhubungan dengan entitas
+        <b>Mata Kuliah</b> melalui relasi “mengambil”.
+      </p>
+      <p>
+        Dalam ERD, relasi biasanya digambarkan dengan bentuk
+        <b>belah ketupat (diamond)</b> yang menghubungkan dua atau lebih
+        entitas. Tujuan relasi ini adalah menunjukkan bagaimana data antar
+        entitas saling terhubung.
+      </p>
+      <ul>
+        <li>
+          <b>One to One (1:1):</b> satu entitas hanya berhubungan dengan satu
+          entitas lain.
+        </li>
+        <li>
+          <b>One to Many (1:N):</b> satu entitas bisa terhubung ke banyak
+          entitas lain.
+        </li>
+        <li>
+          <b>Many to Many (M:N):</b> banyak entitas bisa terhubung dengan banyak
+          entitas lain.
+        </li>
+      </ul>
+    </article>
+
+    <article id="post4">
+      <h2>Post 4: Video Pembelajaran ERD</h2>
+      <p>
+        Supaya lebih mudah memahami konsep <b>ERD</b>, kamu bisa nonton video
+        pembelajaran berikut. Di dalamnya dijelaskan bagaimana menggambar
+        diagram entitas, atribut, dan relasi secara visual.
+      </p>
+      <a href="https://youtu.be/hD9LYfoH6y0" target="_blank" class="btn-youtube"
+        >🎬 Tonton di YouTube</a
+      >
+    </article>
+
+    <footer>
+      <p>
+        © 2025 - Belajar ERD |
+        <a href="https://www.ubpkarawang.ac.id" class="btn-link" target="_blank"
+          >Kunjungi UBP Karawang</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
